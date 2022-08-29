@@ -4,6 +4,8 @@ import java.util.List;
 public class Empleado {
     private long id;
     private String correo;
+
+    private String telefono;
     private Perfil perfil;
     private EnumeradorRolNombre rol;
     private Empresa empresa;
