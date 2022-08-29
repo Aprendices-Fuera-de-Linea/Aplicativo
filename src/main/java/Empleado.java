@@ -27,6 +27,9 @@ public class Empleado {
         this.correo = correo;
     }
 
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
+
     public Perfil getPerfil() {
         return perfil;
     }
