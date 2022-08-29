@@ -7,6 +7,8 @@ public class Empresa {
     private String documento;
     private String telefono;
     private String direccion;
+
+    private String correo;
     private List<Usuario> usuarios;
     private List<Transaccion> transacciones;
     private Date fechaActualizacion;
@@ -50,6 +52,14 @@ public class Empresa {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public List<Usuario> getUsuarios() {
