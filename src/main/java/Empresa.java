@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.List;
-
+@
 public class Empresa {
     private long id;
     private String nombre;
