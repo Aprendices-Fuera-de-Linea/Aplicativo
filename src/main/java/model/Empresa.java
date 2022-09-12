@@ -1,24 +1,43 @@
+package model;
+
 import java.util.Date;
 import java.util.List;
-@
+import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import javax.persistence.*;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+
 public class Empresa {
-    private long id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
     private String nombre;
     private String documento;
     private String telefono;
     private String direccion;
-
     private String correo;
     private List<Usuario> usuarios;
     private List<Transaccion> transacciones;
     private Date fechaActualizacion;
     private Date fechaCreacion;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -93,13 +112,4 @@ public class Empresa {
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
-
-    public void addUsuario(Usuario usuario) {
-        this.usuarios.add(usuario);
-    }
-
-    public void addTransaccion(Transaccion transaccion) {
-        this.transacciones.add(transaccion);
-    }
 }
-
